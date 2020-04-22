@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UTS PM 2</string>
+    <string name="agama_unknown">Unknown</string>
+    <string name="agama_islam">Islam</string>
+    <string name="agama_kristen">Kristen</string>
+    <string name="agama_katholik">Katholik</string>
+    <string name="agama_hindu">Hindu</string>
+    <string name="agama_budha">Budha</string>
+    <string name="agama_konghucu">Konghucu</string>
+    <string name="kode_dosen">Kode Dosen</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="260dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@mipmap/nnew"
+        android:layout_width="185dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_container"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/gambar"
+            android:src="@drawable/icon_dosen"
+            android:layout_height="135dp"
+            android:layout_width="135dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_below="@id/gambar"
+            android:paddingHorizontal="5dp"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/nama_dosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="Nama Dosen"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status Pegawai"
+            android:id="@+id/status"
+            android:layout_below="@id/nama_dosen"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="right"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

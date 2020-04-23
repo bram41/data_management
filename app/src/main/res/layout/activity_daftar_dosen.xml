@@ -8,18 +8,19 @@
     tools:context=".daftar_dosen">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginVertical="10dp"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/rl1"
             android:layout_centerHorizontal="true"
             android:background="@android:color/white"
             android:id="@+id/recyclerView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/list_item">
-        </androidx.recyclerview.widget.RecyclerView>
+            tools:listitem="@layout/list_item" />
 
         <androidx.core.widget.ContentLoadingProgressBar
             android:layout_marginTop="100dp"
@@ -36,6 +37,31 @@
             android:layout_margin="25dp"
             android:src="@drawable/ic_add_black_24dp"
             android:layout_alignParentEnd="true" />
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@mipmap/nnew"
+            android:gravity="center_vertical"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tx11"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+            <TextView
+                android:layout_below="@id/tx11"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nim"
+                android:textStyle="bold"
+                android:textColor="#fff"/>
+        </RelativeLayout>
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

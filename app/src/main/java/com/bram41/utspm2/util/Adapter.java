@@ -2,6 +2,7 @@ package com.bram41.utspm2.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,12 +45,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @SuppressLint({"CheckResult", "SetTextI18n"})
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-        if (dosen.get(position).getStatus().equals("1")){
-            holder.mStatus.setText("Pegawai Tetap");
-        } else {
-            holder.mStatus.setText("Pegawai Tidak Tetap");
-        }
-        holder.mNama_dosen.setText(dosen.get(position).getNama());
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.skipMemoryCache(true);
@@ -61,6 +56,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                 .load(dosen.get(position).getGambar())
                 .apply(requestOptions)
                 .into(holder.mGambar);
+
+        if (dosen.get(position).getStatus().equals("1")){
+            holder.mStatus.setText("Pegawai Tetap");
+            holder.mStatus.setBackgroundResource(R.drawable.bg2);
+        } else {
+            holder.mStatus.setText("Pegawai Tidak Tetap");
+            holder.mStatus.setBackgroundResource(R.drawable.bg1);
+        }
+        holder.mNama_dosen.setText(dosen.get(position).getNama());
     }
 
     @Override
@@ -81,7 +85,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             mNama_dosen = itemView.findViewById(R.id.nama_dosen);
             mStatus = itemView.findViewById(R.id.status);
             mRowContainer = itemView.findViewById(R.id.row_container);
-
             mListener = listener;
             mRowContainer.setOnClickListener(this);
         }

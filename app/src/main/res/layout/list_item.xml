@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.cardview.widget.CardView
+    app:cardCornerRadius="15dp"
     android:layout_width="wrap_content"
     android:layout_height="260dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
+        android:layout_width="wrap_content"
         android:background="@mipmap/nnew"
-        android:layout_width="185dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="8dp"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
         android:id="@+id/row_container"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -26,7 +28,6 @@
 
         <TextView
             android:layout_below="@id/gambar"
-            android:paddingHorizontal="5dp"
             android:layout_marginVertical="10dp"
             android:id="@+id/nama_dosen"
             android:layout_width="wrap_content"
@@ -38,14 +39,17 @@
             android:textSize="20sp"
             android:textStyle="bold" />
         <TextView
-            android:layout_width="match_parent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Status Pegawai"
             android:id="@+id/status"
             android:layout_below="@id/nama_dosen"
             android:textColor="#fff"
             android:textSize="15sp"
-            android:layout_marginHorizontal="5dp"
             android:gravity="right"/>
 
     </RelativeLayout>

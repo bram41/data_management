@@ -53,7 +53,6 @@ public class daftar_dosen extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
 
-
         listener = new Adapter.RecyclerViewClickListener() {
             @Override
             public void onRowClick(View view, final int position) {
@@ -69,11 +68,9 @@ public class daftar_dosen extends AppCompatActivity {
                 intent.putExtra("tanggal", dosenList.get(position).getTanggal());
                 intent.putExtra("agama", dosenList.get(position).getAgama());
                 startActivity(intent);
-
             }
 
         };
-
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -91,27 +88,7 @@ public class daftar_dosen extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            Toast.makeText(daftar_dosen.this, "   Surya Saputra \n A22.2018.02635", Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     public void getDosen() {
-
         Call<List<Dosen>> call = apiInterface.getDosen();
         call.enqueue(new Callback<List<Dosen>>() {
             @Override
@@ -139,6 +116,4 @@ public class daftar_dosen extends AppCompatActivity {
         super.onResume();
         getDosen();
     }
-
-
 }

@@ -58,13 +58,18 @@ import retrofit2.Response;
 
 public class editor extends AppCompatActivity {
 
-
     private Spinner mAgamaSpinner;
     private RadioGroup mStatus, mKel;
     private RadioButton rStatus, rKel, satu, dua, tiga, empat;
     private Button mTgl;
     private EditText mKode, mNama, mAlamat, mKota;
     private CircleImageView mGambar;
+    private FloatingActionButton mFabChoosePic;
+    private SimpleDateFormat dateFormatter, dateDB;
+    private TextView ltgl;
+    private ApiInterface apiInterface;
+    private Menu action;
+    private Bitmap bitmap;
 
     private String mAgama = "0";
     public static final String AGAMA_UNKNOWN = "0";
@@ -74,16 +79,8 @@ public class editor extends AppCompatActivity {
     public static final String AGAMA_HINDU = "4";
     public static final String AGAMA_BUDHA = "5";
     public static final String AGAMA_KONGHUCU = "6";
-    private FloatingActionButton mFabChoosePic;
-    private SimpleDateFormat dateFormatter, dateDB;
-    private TextView ltgl;
 
     private String nama, kode, kelamin, gambar, alamat, kota, tgl, status, agama, lahir;
-
-    private Menu action;
-    private Bitmap bitmap;
-
-    private ApiInterface apiInterface;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -144,7 +141,6 @@ public class editor extends AppCompatActivity {
         agama = intent.getStringExtra("agama");
 
         setDataFromIntentExtra();
-
     }
 
 

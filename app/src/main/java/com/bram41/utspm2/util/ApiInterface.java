@@ -46,6 +46,5 @@ public interface ApiInterface {
             @Field("key") String key,
             @Field("kode") String kode,
             @Field("gambar") String gambar);
-
 }
 

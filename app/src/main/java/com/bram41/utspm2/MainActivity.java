@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int waktu_loading = 4000;
+        int waktu_loading = 1000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

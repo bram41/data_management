@@ -21,7 +21,6 @@ public class ApiClient {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
-
         }
         return retrofit;
     }
